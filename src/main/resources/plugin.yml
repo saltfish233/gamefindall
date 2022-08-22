@@ -1,0 +1,7 @@
+name: GameFindAll
+version: '${project.version}'
+main: com.tnxts.gamefindall.GameFindAll
+api-version: 1.19
+commands:
+    EnterRoom:
+        description: Enter the room

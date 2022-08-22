@@ -43,29 +43,29 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                &lt;!&ndash;把jar包复制到指定的位置&ndash;&gt;-->
-<!--                <artifactId>maven-antrun-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>copy</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <configuration>-->
-<!--                            <tasks>-->
-<!--                                &lt;!&ndash;todir指定要复制到哪个位置，这里我设置为空则表示复制到当前项目下   eg：D:/jar&ndash;&gt;-->
-<!--                                <copy todir="E:\桌面\mcservers\pluginserver1.19\plugins">-->
-<!--                                    <fileset dir="${project.build.directory}">-->
-<!--                                        <include name="${project.artifactId}-${project.version}.jar" />-->
-<!--                                    </fileset>-->
-<!--                                </copy>-->
-<!--                            </tasks>-->
-<!--                        </configuration>-->
-<!--                        <goals>-->
-<!--                            <goal>run</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <plugin>
+                <!--把jar包复制到指定的位置-->
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <tasks>
+                                <!--todir指定要复制到哪个位置，这里我设置为空则表示复制到当前项目下   eg：D:/jar-->
+                                <copy todir="E:\桌面\mcservers\pluginserver1.19\plugins">
+                                    <fileset dir="${project.build.directory}">
+                                        <include name="${project.artifactId}-${project.version}.jar" />
+                                    </fileset>
+                                </copy>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <resources>
             <resource>
